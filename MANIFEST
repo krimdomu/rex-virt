@@ -1,0 +1,8 @@
+lib/Rex/Virt.pm
+lib/Rex/Virt/destroy.pm
+lib/Rex/Virt/list.pm
+lib/Rex/Virt/reboot.pm
+lib/Rex/Virt/set_option.pm
+lib/Rex/Virt/start.pm
+lib/Rex/Virt/stop.pm
+Makefile.PL

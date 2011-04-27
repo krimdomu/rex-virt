@@ -1,0 +1,12 @@
+Source: rex-virt
+Section: admin
+Priority: optional
+Maintainer: Jan Gehring <jan.gehring@gmail.com>
+Build-Depends: debhelper (>= 4), perl (>= 5.10.0), rex (>= 0.3.99)
+Standards-Version: 3.5.1
+Homepage: https://github.com/krimdomu/rex-virt
+
+Package: rex-virt
+Architecture: all
+Depends: perl (>= 5.10.0), rex (>= 0.3.99), libsys-virt-perl
+Description: libvirt Modul for (R)?ex

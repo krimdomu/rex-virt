@@ -1,0 +1,54 @@
+=pod
+
+rex-virt is a (R)?ex module to manage virtual machines with libvirt (L<Sys::Virt>).
+
+=head2 Usage
+
+In your Rexfile use the following commands.
+
+ use Rex::Virt;
+
+ virt_username "test";
+ virt_password "test1";
+ virt_type "xen";
+ 
+ task "list-all", sub {
+         my @vms = virt list => "all";
+         print Dumper(\@vms);
+ };
+ 
+ task "list-running", sub {
+         my @vms = virt list => "running";
+         print Dumper(\@vms);
+ };
+ 
+ task "start", sub {
+         virt start => "opensuse11";
+ };
+ 
+ task "set-memory", sub {
+         virt set_option => "opensuse11",
+                 max_memory => 1024*1024,
+                 memory     => 512*1024;
+ };
+ 
+ task "reboot", sub {
+         virt reboot => "opensuse11";
+ };
+ 
+ task "shutdown", sub {
+         virt shutdown => "opensuse11";
+ };
+ 
+ task "destroy", sub {
+         virt => destroy => "opensuse11";
+ };
+ 
+
+And then you can run your tasks:
+
+ rex -H "host[01..10]" list-all
+ rex -H "host02" start
+ ...
+
+
