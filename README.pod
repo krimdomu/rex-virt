@@ -41,7 +41,7 @@ In your Rexfile use the following commands.
  };
  
  task "destroy", sub {
-         virt => destroy => "opensuse11";
+         virt destroy => "opensuse11";
  };
  
 
